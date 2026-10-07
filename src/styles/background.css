@@ -1,0 +1,85 @@
+/* ============================================================
+   Cosmic background — fixed layer behind everything
+   ============================================================ */
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 80% 55% at 50% -10%, rgba(47, 123, 255, 0.22), transparent 70%),
+    radial-gradient(ellipse 60% 50% at 85% 20%, rgba(139, 92, 246, 0.14), transparent 65%),
+    radial-gradient(ellipse 70% 60% at 10% 70%, rgba(34, 211, 238, 0.10), transparent 70%),
+    var(--bg);
+}
+
+/* Slow drifting aurora blobs */
+.bg-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.5;
+  animation: drift 26s ease-in-out infinite alternate;
+}
+.bg-orb--1 {
+  width: 520px; height: 520px;
+  top: -180px; left: -120px;
+  background: radial-gradient(circle, rgba(47, 123, 255, 0.55), transparent 65%);
+}
+.bg-orb--2 {
+  width: 440px; height: 440px;
+  top: 30%; right: -140px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.42), transparent 65%);
+  animation-delay: -9s;
+}
+.bg-orb--3 {
+  width: 480px; height: 480px;
+  bottom: -200px; left: 35%;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.32), transparent 65%);
+  animation-delay: -16s;
+}
+
+@keyframes drift {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to   { transform: translate3d(60px, -50px, 0) scale(1.14); }
+}
+
+/* Subtle grid */
+.bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, #000 20%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, #000 20%, transparent 75%);
+}
+
+/* Star field (canvas) */
+.bg-stars {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+}
+
+/* Film grain / noise */
+.bg-noise {
+  position: absolute;
+  inset: 0;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Scroll progress bar */
+.progress-bar {
+  position: fixed;
+  top: 0; left: 0;
+  height: 2px;
+  background: var(--grad);
+  z-index: 100;
+  box-shadow: 0 0 12px rgba(79, 155, 255, 0.9);
+  transition: width 0.1s linear;
+}
