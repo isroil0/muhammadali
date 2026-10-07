@@ -2,7 +2,7 @@ import { profile } from '../data'
 import { useTypewriter } from '../hooks/useTypewriter'
 import { useLanguage } from '../i18n/LanguageProvider'
 import {
-  IconArrow, IconDownload, IconGithub, IconLinkedin, IconTelegram,
+  IconArrow, IconDownload, IconInstagram, IconTelegram,
   IconSpark, IconLayers, IconMail,
 } from './Icons'
 
@@ -43,9 +43,8 @@ export default function Hero() {
           </div>
 
           <div className="hero-socials reveal" data-reveal-delay="370">
-            <a className="social-btn" href={profile.socials.github} target="_blank" rel="noreferrer" aria-label="GitHub"><IconGithub /></a>
-            <a className="social-btn" href={profile.socials.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn"><IconLinkedin /></a>
             <a className="social-btn" href={profile.socials.telegram} target="_blank" rel="noreferrer" aria-label="Telegram"><IconTelegram /></a>
+            <a className="social-btn" href={profile.socials.instagram} target="_blank" rel="noreferrer" aria-label="Instagram"><IconInstagram /></a>
             <a className="social-btn" href={`mailto:${profile.email}`} aria-label={t.contact.email}><IconMail /></a>
           </div>
         </div>

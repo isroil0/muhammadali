@@ -42,8 +42,12 @@ export const IconGithub = (p) => (
   <Svg {...p}><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0019.5 4.77 5.07 5.07 0 0019.41 1s-1.21-.35-4 1.52a13.38 13.38 0 00-7 0C5.62.65 4.41 1 4.41 1a5.07 5.07 0 00-.09 3.77A5.44 5.44 0 002.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" /></Svg>
 )
 
-export const IconLinkedin = (p) => (
-  <Svg {...p}><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-13h4v1.8A6 6 0 0116 8z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></Svg>
+export const IconInstagram = (p) => (
+  <Svg {...p}>
+    <rect x="2" y="2" width="20" height="20" rx="5.5" />
+    <circle cx="12" cy="12" r="4.2" />
+    <circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none" />
+  </Svg>
 )
 
 export const IconTelegram = (p) => (

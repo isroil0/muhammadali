@@ -12,9 +12,8 @@ export const profile = {
   email: 'gayratovmuhammadali775@gmail.com',
   phone: '+998 77 777 50 37',
   socials: {
-    github: 'https://github.com/',
-    linkedin: 'https://linkedin.com/in/',
     telegram: 'https://t.me/m777775037',
+    instagram: 'https://instagram.com/muhammadali.web',
   },
 }
 
